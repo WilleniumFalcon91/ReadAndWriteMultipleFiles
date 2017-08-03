@@ -9,7 +9,7 @@ const rl = readline.createInterface( {
 rl.question('filename: ', (input) =>  {
     rl.question('filename: ', (output) => {
         rl.close();
-        fs.readline(input, (err, buffer) => {
+        fs.readFile(input, (err, buffer) => {
             if (err) {
                 console.log(err.message);
                 return;
